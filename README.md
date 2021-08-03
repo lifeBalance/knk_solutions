@@ -4,3 +4,4 @@ This repo contains **my solutions** for the **exercises** and **projects** for t
 <img alt= "Book cover" src="cover.jpg" width="250px">
 
 * [Chapter 02](ch02)
+* [Chapter 03](ch03)
