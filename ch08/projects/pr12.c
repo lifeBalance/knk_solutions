@@ -2,7 +2,6 @@
 **	Programming project #12
 */
 
-
 #include <stdio.h>
 #include <ctype.h>
 
