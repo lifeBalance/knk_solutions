@@ -122,3 +122,111 @@ array.)
 (c) The number of positive elements in `a`.
 
 **Answer**: Check `ex10.c`
+
+## Exercise 11
+Write the following function:
+
+```c
+float compute_GPA(char grades[], int n);
+```
+
+The `grades` array will contain letter grades (`A`, `B`, `C`, `D` or `F`, either upper-case or lower-case); `n` is the length of the array. The function should return the average of the grades (assume that `A` = 4, `B` = 3, `C` = 2, `D` = 1 and `F` = 0).
+
+**Answer**: Check `ex11.c`
+
+## Exercise 12
+Write the following function:
+```c
+double inner_product(double a[], double b[], int n);
+```
+
+The function should return `a[0] * b[0] + a[1] * b[1] + ... + a[n-1] * b[n-1]`.
+
+**Answer**: Check `ex12.c`
+
+## Exercise 13
+Write the following function, which evaluates a chess position:
+
+```c
+int evaluate_position(char board[8][8]);
+```
+
+`board` represents a configuration of pieces on a chessboard, where the letters `K`, `Q`, `R`, `B`, `N` and `P` represent White pieces, and the letters `k`, `q`, `r`, `b`, `n` and `p` represent Black pieces. `evaluate_position` should sum the values of the White pieces (`Q` = 9, `R` = 5, `B` = 3, `N` = 3, `P` = 1). It should also sum the values of the Black pieces (done in a similar way). The function will return the difference between the two numbers. This value will be positive if White has an advantage in material and negative if Black has an advantage.
+
+**Answer**: Check `ex13.c`
+
+## Exercise 14
+The following function is supposed to return `true` if any element of the array `a` has the value `0` and `false` if all elements are nonzero. Sadly, it contains an error. Find the error and show how to fix it:
+```c
+bool has_zero(int a[], int n)
+{
+    int i;
+
+    for (i = 0; i < n; i++)
+        if (a[i] == 0)
+            return true;
+        else
+            return false;
+}
+```
+
+**Answer**: The error is that as soon as one of the elements is **non-zero**, it returns `false`, whithout having checked **all** of the elements. Check `ex14.c` to see the fix.
+
+## Exercise 15
+The following (rather confusing) function finds the median of three numbers. Rewrite the function so that it has just one `return` statement.
+```c
+double median(double x, double y, double z)
+{
+    if (x <= y)
+        if (y <= z) return y;
+        else if (x <= z) return z;
+        else return x;
+    if (z <= y) return y;
+    if (x <= z) return x;
+    return z;
+}
+```
+
+**Answer**: Check `ex15.c` to see the refactored version.
+
+## Exercise 16
+Condense the `fact` function in the same way we condensed `power`.
+
+**Answer**: Check `ex16.c` to see the refactored version.
+
+## Exercise 17
+Rewrite the `fact` function so that it's no longer recursive.
+
+**Answer**: Check `ex17.c` to see the refactored version.
+
+## Exercise 18
+Write a recursive version of the `gcd` function (see Exercise 3). Here's the strategy to use for computing `gcd(m, n)`: If `n` is 0, return `m`. Otherwise, call `gcd` recursively, passing `n` as the first argument and `m % n` as the second.
+
+**Answer**: Check `ex18.c` to see the refactored version.
+
+## Exercise 19
+Consider the following "mystery" function:
+```c
+void pb(int n)
+{
+    if (n != 0) {
+        pb(n / 2);
+        putchar('0' + n % 2);
+    }
+}
+```
+
+Trace the execution of the function by hand. Then write a program that calls the function, passing it a number entered by the user. What does the function do?
+
+**Answer**: When, for example, we call `pb(8)` the following happens:
+
+1. `pb(8)` is pushed onto the stack; `8 != 0` so call `pb(4)`.
+2. `pb(4)` is pushed onto the stack; `4 != 0` so call `pb(2)`.
+3. `pb(2)` is pushed onto the stack; `2 != 0` so call `pb(0)`.
+4. `pb(8)` is pushed onto the stack; `0 != 0` becomes false, so we start popping the stack.
+5. Pops: prints `1`.
+6. Pops: prints `0`.
+7. Pops: prints `0`.
+8. Pops: prints `0`.
+
+So basically it prints any number in binary (base 2). Check `ex19.c` to see it in action.
