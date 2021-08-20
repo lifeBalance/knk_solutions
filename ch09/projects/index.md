@@ -35,3 +35,19 @@ bool equal_array(int counts1[26], int counts2[26]);
 `main` will call `read_word` twice, once for each of the two words entered by the user. As it reads a word, `read_word` will use the letters in the word to update the `counts` array, as described in the original project. (`main` will declare two arrays, one for each word. These arrays are used to track how many times each letter occurs in the words.) `main` will then call `equal_array`, passing it the two arrays. `equal_array` will return `true` if the elements in the two arrays are identical (indicating that the words are anagrams) and `false` otherwise.
 
 **Answer**: Check `pr04.c`.
+
+## Project 5
+Modify Programming Project 17 from Chapter 8 so that it includes the following
+functions:
+```c
+void create_magic_square(int n, char magic_square[n][n]);
+void print_magic_square(int n, char magic_square[n][n]);
+```
+
+After obtaining the number `n` from the user, `main` will call `create_magic_square`, passing it an `n x n` array that is declared inside `main`. `create_magic_square` will fil the array with the numbers 1, 2, ..., *n*² as described in the original project. `main` will then call `print_magic_square`, which will display the array in the format described in the oroginal project. *Note*: If your compiler doesn't support variable-length arrays, declare the array in `main` to be 99 x 99 instead of *n* x *n* and use the following prototypes instead:
+```c
+void create_magic_square(int n, char magic_square[99][99]);
+void print_magic_square(int n, char magic_square[99][99]);
+```
+
+**Answer**: Check `pr05.c`.
