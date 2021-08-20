@@ -51,3 +51,12 @@ void print_magic_square(int n, char magic_square[99][99]);
 ```
 
 **Answer**: Check `pr05.c`.
+
+## Project 6
+Write a function that computes the value of the following polynomial:
+
+3x<sup>5</sup> + 2x<sup>4</sup> - 5x<sup>3</sup> - x² + 7x - 6
+
+Write a program that asks the user to enter a value for `x`, calls the function to compute the value of the polynomial, and then displays the value returned by the function.
+
+**Answer**: Check `pr06.c`.
