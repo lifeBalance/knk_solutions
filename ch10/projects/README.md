@@ -15,3 +15,8 @@ Parentheses/braces are nested properly
 Modify the `poker.c` program of Section 10.5 by moving the `num_in_rank` and `num_in_suit` arrays into `main`, which will pass them as arguments to `read_cards` and `analyze_hand`.
 
 **Answer**: Check `pr02.c`.
+
+## Project 3
+Remove the `num_in_rank`, `num_in_suit` and `card_exists` arrays from the `poker.c` program of Section 10.5. Have the program store the cards in a 5 x 2 array instead. Each row of the array will represent a card. For example, if the array is named `hand`, then `hand[0][0]` will store the rank of the first card and `hand[0][1]` will store the suit of the first card.
+
+**Answer**: Check `pr03.c`.
