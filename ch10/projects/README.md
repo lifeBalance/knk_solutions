@@ -25,3 +25,8 @@ Remove the `num_in_rank`, `num_in_suit` and `card_exists` arrays from the `poker
 Modify the `poker.c` program of Section 10.5 by having it recognize an additional category, "royal flush" (ace, king, queen, jack, ten of the same suit). A royal flush ranks higher than all other ranks.
 
 **Answer**: Check `pr04.c`.
+
+## Project 5
+Modify the `poker.c` program of Section 10.5 by allowing "ace-low" straights (ace, two, three, four, five).
+
+**Answer**: Check `pr05.c`.
