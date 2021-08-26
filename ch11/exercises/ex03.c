@@ -19,7 +19,6 @@ int		main(void)
 	return (0);
 }
 
-
 void	avg_sum(double a[], int n, double *avg, double *sum)
 {
 	int i;

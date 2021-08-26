@@ -68,3 +68,16 @@ void avg_sum(double a[], int n, double *avg, double *sum)
 ```
 
 **Answer**: The **indirection operator** must be used to change the values of the references from another function. See `ex03.c`
+
+## Exercise 4
+Write the following function:
+```c
+void swap(int *p, int *q);
+```
+
+When passed the addresses of two variables, `swap` should exchange the values of the variables:
+```c
+swap(&i, &j);    /* exchanges values of i and j */
+```
+
+**Answer**: See `ex04.c`.
