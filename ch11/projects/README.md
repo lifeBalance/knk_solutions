@@ -33,3 +33,8 @@ void reduce(int numerator, int denominator,
 `numerator` and `denominator` are the numerator and denominator of a fraction. `reduced_numerator` and `reduced_denominator` are pointers to variables in which the function will store the numerator and denominator of the fraction once it has been reduced to lowest terms.
 
 **Answer**: See `pr03.c`
+
+## Project 4
+Modify the `poker.c` program of Section 10.5 by moving all external variables into `main` and modifying functions so that they communicate by passing arguments. The `analyze_hand` function needs to change the `straight`, `flush`, `four`, `three` and `pairs` variables, so it will have to be passed pointers to those variables.
+
+**Answer**: See `pr04.c`
