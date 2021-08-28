@@ -28,3 +28,20 @@ middle = (low + high) / 2;
 ```
 
 **Answer**: Two pointer can not be added, only subtracted; subtracting we'd get a value such as 2 or 4 or whatever, to which we have to add the address of low element to turn `middle` into a valid address. Check `ex02.c` to see it in action.
+
+## Exercise 3
+What will be the contents of the `a` array after the following statements are executed?
+```c
+#define N 10
+
+int a[N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int *p = &a[0], *q = &a[N-1], temp;
+
+while (p < q) {
+    temp = *p;
+    *p++ = *q;
+    *q-- = temp;
+}
+```
+
+**Answer**: It reverses the elements in the array using two pointers. Check `ex03.c` to see it in action.
