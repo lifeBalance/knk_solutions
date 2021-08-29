@@ -71,3 +71,19 @@ Suppose that `a` is a one-dimensional array and `p` is a pointer variable. Assum
 (c) `*p == a[0]`: Legal and true, both are dereferencing the first element.
 
 (d) `p[0] == a[0]`: Legal and true, array subscripting can be used with pointers too.
+
+## Exercise 6
+Rewrite the following function to use pointer arithmetic instead of array subscripting. (In other words, elimate the variable `i` and all uses of the `[]` operator.) Make as few changes as possible.
+```c
+int sum_array(const int a[], int n)
+{
+    int i, sum;
+
+    sum = 0;
+    for (i = 0; i < n; i++)
+        sum += a[i];
+    return sum;
+}
+```
+
+**Answer**: Check `ex06.c` to see it in action.
