@@ -97,3 +97,17 @@ bool search(const int a[], int n, int key);
 `a` is an array to be searched, `n` is the number of elements in the array, and `key` is the search key. `search` should return `true` if `key` matches some element of `a`, and `false` if it doesn't. Use pointer arithmetic -- not subscripting -- to visit array elements.
 
 **Answer**: Check `ex07.c` to see it in action.
+
+## Exercise 8
+Rewrite the following function to use pointer arithmetic instead of array subscripting. (In other words, eliminate the variable `i` and all uses of the `[]` operator.) Make as few changes as possible.
+```c
+void store_zeros(int a[], int n)
+{
+    int i;
+
+    for (i = 0; i < n; i++)
+        a[i] = 0;
+}
+```
+
+**Answer**: Check `ex08.c` to see it in action.
