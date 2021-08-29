@@ -45,3 +45,8 @@ while (p < q) {
 ```
 
 **Answer**: It reverses the elements in the array using two pointers. Check `ex03.c` to see it in action.
+
+## Exercise 4
+Rewrite the `make_empty`, `is_empty` and `is_full` functions of Section 10.2 to use the pointer variable `top_ptr` instead of the integer variable `top`.
+
+**Answer**: Check `ex04.c` to see it in action (See **pages 262 and 263** to see how `push` and `pop` must be implemented).
