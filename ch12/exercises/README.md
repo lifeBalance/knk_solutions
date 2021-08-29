@@ -50,3 +50,24 @@ while (p < q) {
 Rewrite the `make_empty`, `is_empty` and `is_full` functions of Section 10.2 to use the pointer variable `top_ptr` instead of the integer variable `top`.
 
 **Answer**: Check `ex04.c` to see it in action (See **pages 262 and 263** to see how `push` and `pop` must be implemented).
+
+## Exercise 5
+Suppose that `a` is a one-dimensional array and `p` is a pointer variable. Assuming that the assignment `p = a` has just been performed, which of the following expressions are illegal because of mismatched types? Of the remaining expressions, which are true (have a nonzero value)?
+
+(a) `p == a[0]`
+
+(b) `p == &a[0]`
+
+(c) `*p == a[0]`
+
+(d) `p[0] == a[0]`
+
+**Answer**: Check `ex05.c` to see it in action.
+
+(a) `p == a[0]`: Illegal since `p` is an address and `a[0]` an element.
+
+(b) `p == &a[0]`: Legal and true, they're both the same address.
+
+(c) `*p == a[0]`: Legal and true, both are dereferencing the first element.
+
+(d) `p[0] == a[0]`: Legal and true, array subscripting can be used with pointers too.
