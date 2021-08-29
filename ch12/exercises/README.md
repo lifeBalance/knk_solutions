@@ -121,3 +121,8 @@ double inner_product(const double *a, const double *b, int n);
 `a` and `b` both point to arrays of length `n`. The function should return `a[0] * b[0] + a[1] * b[1] +` ... `+ a[n-1] * b[n-1]`. Use pointer arithmetic --not subscripting-- to visit array elements.
 
 **Answer**: Check `ex09.c` to see it in action.
+
+## Exercise 10
+Modify the `find_middle` function of Section 11.5 so that it uses pointer arithmetic to calculate the return value.
+
+**Answer**: Check `ex10.c` to see it in action.
