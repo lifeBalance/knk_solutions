@@ -167,3 +167,8 @@ Note also how we're calculating the `size` of the array as a product of **rows**
 Write a loop that prints all temperature readings stored in row `i` of the `temperatures` array (see Exercise 14). Use a pointer to visit each element of the row.
 
 **Answer**: Check `ex15.c`.
+
+## Exercise 16
+Write a loop that prints the highest temperature in the `temperatures` array (see Exercise 14) for each day of the week. The loop body should call the `find_largest` function, passing it one row of the array at a time.
+
+**Answer**: Check `ex16.c`.
