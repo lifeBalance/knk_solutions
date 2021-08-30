@@ -146,3 +146,19 @@ void find_two_largest(const int *a, int n, int *largest, int *second_largest);
 Section 8.2 had a program fragment in which two nested `for` loops initialized the array `ident` for use as an identity matrix. Rewrite this code, using a single pointer to step through the array one element at a time. *Hint*: Since we won't be using `row` and `col` index variables, it won't be easy to tell where to store 1. Instead, we can use the fact that the first element of the array should be 1, the next `N` elements should be 0, the next element should be 1 and so forth. Use a variable to keep track of how many consecutive 0s have been stored; when the count reaches `N`, it's time to store 1.
 
 **Answer**: Check `ex13.c` to see it in action.
+
+## Exercise 14
+Assume that the following array contains a week's worth of hourly temperature readings, with each row containing the readings for one day:
+```c
+int temperatures[7][24];
+```
+
+Write a statement that uses the `search` function (see Exercise 7) to search the entire `temperatures` array for the value 32.
+
+**Answer**: Check `ex14.c` to see it in action. Basically the call goes like this:
+
+    search(temperatures[0], size, 32);
+
+We have to trick the function into believing we're passing a one-dimensional array, and we do that by passing `temperatures[0]` instead of just `temperatures` (since that would be a two-dimensional array).
+
+Note also how we're calculating the `size` of the array as a product of **rows** times **columns**.
