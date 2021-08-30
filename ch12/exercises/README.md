@@ -162,3 +162,8 @@ Write a statement that uses the `search` function (see Exercise 7) to search the
 We have to trick the function into believing we're passing a one-dimensional array, and we do that by passing `temperatures[0]` instead of just `temperatures` (since that would be a two-dimensional array).
 
 Note also how we're calculating the `size` of the array as a product of **rows** times **columns**.
+
+## Exercise 15
+Write a loop that prints all temperature readings stored in row `i` of the `temperatures` array (see Exercise 14). Use a pointer to visit each element of the row.
+
+**Answer**: Check `ex15.c`.
