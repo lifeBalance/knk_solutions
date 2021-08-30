@@ -126,3 +126,8 @@ double inner_product(const double *a, const double *b, int n);
 Modify the `find_middle` function of Section 11.5 so that it uses pointer arithmetic to calculate the return value.
 
 **Answer**: Check `ex10.c` to see it in action.
+
+## Exercise 11
+Modify the `find_largest` function so that it uses pointer arithmetic --not subscripting-- to visit array elements.
+
+**Answer**: Check `ex11.c` to see it in action.
