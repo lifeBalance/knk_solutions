@@ -141,3 +141,8 @@ void find_two_largest(const int *a, int n, int *largest, int *second_largest);
 `a` points to an array of length `n`. The function searches the array for its largest and second-largest elements, storing them in the variables pointed to by `largest` and `second_largest`, respectively. Use pointer arithmetic --not subscripting-- to visit array elements.
 
 **Answer**: Check `ex12.c` to see it in action.
+
+## Exercise 13
+Section 8.2 had a program fragment in which two nested `for` loops initialized the array `ident` for use as an identity matrix. Rewrite this code, using a single pointer to step through the array one element at a time. *Hint*: Since we won't be using `row` and `col` index variables, it won't be easy to tell where to store 1. Instead, we can use the fact that the first element of the array should be 1, the next `N` elements should be 0, the next element should be 1 and so forth. Use a variable to keep track of how many consecutive 0s have been stored; when the count reaches `N`, it's time to store 1.
+
+**Answer**: Check `ex13.c` to see it in action.
