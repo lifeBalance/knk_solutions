@@ -172,3 +172,19 @@ Write a loop that prints all temperature readings stored in row `i` of the `temp
 Write a loop that prints the highest temperature in the `temperatures` array (see Exercise 14) for each day of the week. The loop body should call the `find_largest` function, passing it one row of the array at a time.
 
 **Answer**: Check `ex16.c`.
+
+## Exercise 17
+Rewrite the following function to use pointer arithmetic instead of array subscripting. (In other words, eliminate the variables `i` and `j` and all uses of the `[]` operator.) Use a single loop instead of nested loops.
+```c
+int sum_two_dimensional_array(const int a[][LEN], int n)
+{
+    int i, j, sum = 0;
+
+    for (i = 0; i < n; i++)
+        for (j = 0; j < LEN; j++)
+            sum += a[i][j];
+    return sum;
+}
+```
+
+**Answer**: Check `ex17.c`.
