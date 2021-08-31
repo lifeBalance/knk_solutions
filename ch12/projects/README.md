@@ -48,3 +48,8 @@ Modify Programming Project 14 from Chapter 8 so that it uses a pointer instead o
 Modify the `qsort.c` program of Section 9.6 so that `low`, `high` and `middle` are pointers to array elements rather than integers. The `split` function will need to return a pointer, not an integer.
 
 **Answer**: Check `pr06.c` to see it in action.
+
+## Project 7
+Modify the `maxmin.c` program of Section 11.4 so that the `max_min` function uses a pointer instead of an integer to keep track of the current position in the array.
+
+**Answer**: Check `pr07.c` to see it in action.
