@@ -28,3 +28,13 @@ Ignore all characters that aren't letters. Use integer variables to keep track o
  (b) Revise the program to use pointers instead of integers to keep track of positions in the array.
 
 **Answer**: Check `pr02a.c` and `pr02b.c` for both versions.
+
+## Project 3
+Simplify Programming Project 1(b) by taking advantage of the fact that an array name can be used as a pointer.
+
+**Answer**: Check `pr01b.c` to see it in action. I already used the array name as a pointer.
+
+## Project 4
+Simplify Programming Project 2(b) by taking advantage of the fact that an array name can be used as a pointer.
+
+**Answer**: Check `pr02b.c` to see it in action. I already used the array name as a pointer.
