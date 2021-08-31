@@ -43,3 +43,8 @@ Simplify Programming Project 2(b) by taking advantage of the fact that an array 
 Modify Programming Project 14 from Chapter 8 so that it uses a pointer instead of an integer to keep track of the current position in the array that contains the sentence.
 
 **Answer**: Check `pr05.c` to see it in action.
+
+## Project 6
+Modify the `qsort.c` program of Section 9.6 so that `low`, `high` and `middle` are pointers to array elements rather than integers. The `split` function will need to return a pointer, not an integer.
+
+**Answer**: Check `pr06.c` to see it in action.
