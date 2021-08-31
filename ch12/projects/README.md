@@ -38,3 +38,8 @@ Simplify Programming Project 1(b) by taking advantage of the fact that an array 
 Simplify Programming Project 2(b) by taking advantage of the fact that an array name can be used as a pointer.
 
 **Answer**: Check `pr02b.c` to see it in action. I already used the array name as a pointer.
+
+## Project 5
+Modify Programming Project 14 from Chapter 8 so that it uses a pointer instead of an integer to keep track of the current position in the array that contains the sentence.
+
+**Answer**: Check `pr05.c` to see it in action.
