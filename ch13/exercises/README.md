@@ -88,3 +88,16 @@ If the user enters `12abc34 56def78`, what will be the values of `i`, `s` and `j
 * The first `%d` scans `12` into `i`.
 * The `%s` scans `abc34` (up until the first space) into `s`.
 * The last `%d` scans `56` into `j`.
+
+## Exercise 4
+Modify the `read_line` function in each of the following ways:
+
+(a) Have it skip whitespace before beginning to store input characters.
+
+(b) Have it stop reading at the first whitespace character. *Hint*: To determine whether or not a character is whitespace, call the `isspace` function.
+
+(c) Have it stop reading at the first newline character, then store the newline character in the string.
+
+(d) Have it leave behind characters that it doesn't have room to store.
+
+**Answer**: See `ex04a.c`, `ex04b.c`, `ex04c.c`, and `ex04d.c`.
