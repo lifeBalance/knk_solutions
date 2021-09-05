@@ -74,3 +74,17 @@ Which of the following function calls are legal? Show the output produced by eac
 (c) `puts(p);` **Legal** since `p` is a pointer to string, exactly what `puts` is expecting. It prints `abc`.
 
 (d) `puts(*p);` **Illegal**, since `*p` is dereferencing the string pointed by `p`, so `puts` receives a character; I got a segmentation fault and nothing was printed.
+
+## Exercise 3
+Suppose that we call `scanf` as follows:
+```c
+scanf("%d%s%d", &i, s, &j);
+```
+
+If the user enters `12abc34 56def78`, what will be the values of `i`, `s` and `j` after the call? (Assume that `i` and `j` are `int` variables and `s` is an array of characters.)
+
+**Answer**: Check `ex03.c` to see it in action.
+
+* The first `%d` scans `12` into `i`.
+* The `%s` scans `abc34` (up until the first space) into `s`.
+* The last `%d` scans `56` into `j`.
