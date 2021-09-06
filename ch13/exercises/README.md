@@ -113,3 +113,24 @@ Modify the `read_line` function in each of the following ways:
 Write a function named `censor` that modifies a string by replacing every occurrence of `foo` by `xxx`. For example, the string `"food fool"` would become `"xxxd xxxl"`. Make the function as short as possible without sacrificing clarity.
 
 **Answer**: See `ex06.c`.
+
+## Exercise 7
+Suppose that `str` is an array of characters. Which one of the following statements is not equivalent to the other three?
+
+(a) `*str = 0;`
+
+(b) `str[0] = '\0';`
+
+(c) `strcpy(str, "");`
+
+(d) `strcat(str, "");`
+
+**Answer**: See `ex07.c`.
+
+(a) `*str = 0;` is dereferencing `str`, which points to the first character of the string, setting it to the integer `0`, which is the ASCII value of the **null character**.
+
+(b) `str[0] = '\0';`, is also null terminating the string at the first character, so what comes after doesn't count.
+
+(c) `strcpy(str, "");` is copying an empty (null terminated) string to `str`, smashing its previous contents.
+
+(d) `strcat(str, "");` is attaching an empty string to the end of `str`; this is the only **not equivalent** statement.
