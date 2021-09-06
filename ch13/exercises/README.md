@@ -172,3 +172,8 @@ char *duplicate(const char *p)
 ```
 
 **Answer**: The problem is that `q` is gonna dissapear once we exit the `duplicate` function. See `ex10.c` for a fix.
+
+## Exercise 11
+The Q&A section at the end of this chapter shows how the `strcmp` function might be written using array subscripting. Modify the function to use pointer arithmetic instead.
+
+**Answer**: See `ex11.c`.
