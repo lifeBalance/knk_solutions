@@ -134,3 +134,13 @@ Suppose that `str` is an array of characters. Which one of the following stateme
 (c) `strcpy(str, "");` is copying an empty (null terminated) string to `str`, smashing its previous contents.
 
 (d) `strcat(str, "");` is attaching an empty string to the end of `str`; this is the only **not equivalent** statement.
+
+## Exercise 8
+What will be the value of the string `str` after the following statements have been executed?
+```c
+strcpy(str, "tire-bouchon");
+strcpy(&str[4], "d-or-wi");
+strcat(str, "red?");
+```
+
+**Answer**: See `ex08.c`.
