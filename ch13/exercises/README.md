@@ -108,3 +108,8 @@ Modify the `read_line` function in each of the following ways:
 (b) Rewrite the `capitalize` function, this time using pointer arithmetic to access the characters in the string.
 
 **Answer**: See `ex05a.c` and `ex05b.c`.
+
+## Exercise 6
+Write a function named `censor` that modifies a string by replacing every occurrence of `foo` by `xxx`. For example, the string `"food fool"` would become `"xxxd xxxl"`. Make the function as short as possible without sacrificing clarity.
+
+**Answer**: See `ex06.c`.
