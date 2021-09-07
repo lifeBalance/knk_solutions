@@ -177,3 +177,13 @@ char *duplicate(const char *p)
 The Q&A section at the end of this chapter shows how the `strcmp` function might be written using array subscripting. Modify the function to use pointer arithmetic instead.
 
 **Answer**: See `ex11.c`.
+
+## Exercise 12
+Write the following function:
+```c
+void get_extension(const char *file_name, char *extension);
+```
+
+`file_name` points to a string containing a file name. The function should store the extension on the file name in the string pointed to by `extension`. For example, if the file name is `"memo.txt"`, the function will store `"txt"` in the string pointed to by `extension`. If the file name doesn't have an extension, the function should store an empty string (a single null character) in the string pointed to by `extension`. Keep the function as simple as possible by having it use the `strlen` and `strcpy` functions.
+
+**Answer**: See `ex12.c`.
