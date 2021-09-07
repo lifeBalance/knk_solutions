@@ -215,3 +215,33 @@ int main(void)
 ```
 
 **Answer**: See `ex14.c`. It prints `Grinch`; it traverses the string and change the value of each character to the one below: `H` becomes `G`, `s` becomes `r`, and so on.
+
+## Exercise 15
+Let `f` be the following function:
+```c
+int f(char *s, char *t)
+{
+    char *p1, *p2;
+
+    for (p1 = s; *p1; p1++) {
+        for (p2 = t; *p2; p2++)
+            if (*p1 == *p2) break;
+        if (*p2 == '\0') break;
+    }
+    return p1 - s;
+}
+```
+
+(a) What is the value of `f("abcd", "babc")`?
+
+(b) What is the value of `f("abcd", "bcd")`?
+
+(c) In general, what value does `f` return when passed two strings `s` and `t`?
+
+**Answer**: See `ex15.c`.
+
+(a) `3`
+
+(b) `0`
+
+(c) It returns the amount of characters of the first string that appears in the second string, but stops counting them as soon as one character is missing.
