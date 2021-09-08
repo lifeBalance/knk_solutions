@@ -261,3 +261,13 @@ bool test_extension(const char *file_name, const char *extension);
 `file_name` points to a string containing a file name. The function should return `true` if the file's extension matches the string pointed to by `extension`, ignoring the case of letters. For example, the call `test_extension("memo.txt", "TXT")` would return `true`. Incorporate the "search for the end of a string" idiom into your function. *Hint*: Use the `toupper` function to convert characters to upper-case before comparing them.
 
 **Answer**: See `ex17.c`.
+
+## Exercise 18
+Write the following function:
+```c
+void remove_filename(char *url);
+```
+
+`url` points to a string containing a URL (Uniform Resource Locator) that ends with a file name (such as `"http://www.knking.com/index.html"`). The function should modify the string by removing the file name and the preceding slash. (In this example, the result will be `"http://www.knking.com"`.) Incorporate the "search for the end of a string" idiom into your function. *Hint*: Have the function replace the last slash in the string by a null character.
+
+**Answer**: See `ex18.c`.
