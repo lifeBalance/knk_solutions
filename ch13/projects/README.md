@@ -51,3 +51,16 @@ Two of hearts
 *Hint*: Replace `rank_code` and `suit_code` by arrays containing pointers to strings.
 
 **Answer**: See `pr03.c`.
+
+## Project 4
+Write a program named `reverse.c` that echoes its command-line arguments in reverse order. Running the program by typing:
+```
+reverse void and null 
+```
+
+should produce the following output:
+```
+null and void
+```
+
+**Answer**: See `reverse.c`.
