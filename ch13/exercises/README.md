@@ -250,3 +250,14 @@ int f(char *s, char *t)
 Use the techniques of Section 13.6 to condense the `count_spaces` function of Section 13.4. In particular, replace the `for` statement by a `while` loop.
 
 **Answer**: See `ex16.c`.
+
+## Exercise 17
+Write the following function:
+
+```c
+bool test_extension(const char *file_name, const char *extension);
+```
+
+`file_name` points to a string containing a file name. The function should return `true` if the file's extension matches the string pointed to by `extension`, ignoring the case of letters. For example, the call `test_extension("memo.txt", "TXT")` would return `true`. Incorporate the "search for the end of a string" idiom into your function. *Hint*: Use the `toupper` function to convert characters to upper-case before comparing them.
+
+**Answer**: See `ex17.c`.
