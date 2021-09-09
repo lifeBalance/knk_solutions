@@ -79,3 +79,8 @@ Total: 94
 *Hint*: Use the `atoi` function to convert each command-line argument from string form to integer form.
 
 **Answer**: See `sum.c`.
+
+## Project 5
+Improve the `planet.c` program of Section 13.7 by having it ignore case when comparing command-line arguments with strings in the `planets` array.
+
+**Answer**: See `pr05.c`. It's just a matter of uppercasing the first character of the command-line arguments (line 29).
