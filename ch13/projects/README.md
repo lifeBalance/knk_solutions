@@ -89,3 +89,13 @@ Improve the `planet.c` program of Section 13.7 by having it ignore case when com
 Modify Programming Project 11 from Chapter 5 so that it uses arrays containing pointers to strings instead of `switch` statements. For example, instead of using a `switch` statement to print the words for the first digit, use the digit as an index into an array that contains the strings `"twenty"`, `"thirty"` and so forth.
 
 **Answer**: See `pr07.c`.
+
+## Project 8
+Modify Programming Project 5 from Chapter 7 so that it includes the following function:
+```c
+int compute_scrabble_value(const char *word);
+```
+
+The function returns the SCRABBLE value of the string pointed to by `word`.
+
+**Answer**: See `pr08.c`.
