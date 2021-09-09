@@ -119,3 +119,13 @@ void reverse_name(char *name);
 The function expects `name` to point to a string containing a first name followed by a last name. It modifies the string so that the last name comes first, followed by a comma, a space, the first initial and a period. The original string may contain extra spaces before the first name, between the first and last names and after the last name.
 
 **Answer**: See `pr10.c`.
+
+## Project 11
+Modify Programming Project 13 from Chapter 7 so that it includes the following function:
+```c
+double compute_average_word_length(const char *sentence);
+```
+
+The function returns the average length of the words in the string pointed to by `sentence`.
+
+**Answer**: See `pr11.c`.
