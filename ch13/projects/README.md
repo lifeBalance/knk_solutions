@@ -80,7 +80,12 @@ Total: 94
 
 **Answer**: See `sum.c`.
 
-## Project 5
+## Project 6
 Improve the `planet.c` program of Section 13.7 by having it ignore case when comparing command-line arguments with strings in the `planets` array.
 
-**Answer**: See `pr05.c`. It's just a matter of uppercasing the first character of the command-line arguments (line 29).
+**Answer**: See `pr06.c`. It's just a matter of uppercasing the first character of the command-line arguments (line 29).
+
+## Project 7
+Modify Programming Project 11 from Chapter 5 so that it uses arrays containing pointers to strings instead of `switch` statements. For example, instead of using a `switch` statement to print the words for the first digit, use the digit as an index into an array that contains the strings `"twenty"`, `"thirty"` and so forth.
+
+**Answer**: See `pr07.c`.
