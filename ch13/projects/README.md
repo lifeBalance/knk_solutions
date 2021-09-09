@@ -99,3 +99,13 @@ int compute_scrabble_value(const char *word);
 The function returns the SCRABBLE value of the string pointed to by `word`.
 
 **Answer**: See `pr08.c`.
+
+## Project 9
+Modify Programming Project 10 from Chapter 7 so that it includes the following function:
+```c
+int compute_vowel_count(const char *sentence);
+```
+
+The function returns the number of vowels in the string pointed to by the `sentence` parameter.
+
+**Answer**: See `pr09.c`.
