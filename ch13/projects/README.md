@@ -154,3 +154,13 @@ bool are_anagrams(const char *word1, const char *word2);
 The function returns `true` if the strings pointed to by `word1` and `word2` are anagrams.
 
 **Answer**: See `pr14.c`.
+
+## Project 15
+Modify Programming Project 6 from Chapter 10 so that it includes the following function:
+```c
+int evaluate_RPN_expression(const char *expression);
+```
+
+The function returns the value of the RPN expression pointed to by `expression`.
+
+**Answer**: See `pr15.c`.
