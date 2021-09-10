@@ -144,3 +144,13 @@ void encrypt(char *message, int shift);
 The function expects `message` to point to a string containing the message to be encrypted; `shift` represents the amount by which each letter in the message is to be shifted.
 
 **Answer**: See `pr13.c`.
+
+## Project 14
+Modify Programming Project 16 from Chapter 8 so that it includes the following function:
+```c
+bool are_anagrams(const char *word1, const char *word2);
+```
+
+The function returns `true` if the strings pointed to by `word1` and `word2` are anagrams.
+
+**Answer**: See `pr14.c`.
