@@ -174,3 +174,13 @@ void reverse(char *message);
 The function reverses the string pointed to by message. *Hint:* Use two pointers, one initially pointing to the first character of the string and the other initially pointing to the last character. Have the function reverse these characters and then move the pointers toward each other, repeating the process until the pointers meet.
 
 **Answer**: See `pr16.c`.
+
+## Project 17
+Modify Programming Project 2 from Chapter 12 so that it includes the following function:
+```c
+bool is_palindrome(const char *message);
+```
+
+The function returns `true` if the string pointed to by `message` is a palindrome.
+
+**Answer**: See `pr17.c`.
