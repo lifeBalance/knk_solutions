@@ -43,3 +43,15 @@ Let `DOUBLE` be the following macro:
 (b) It's `4` again, because the macro is replaced as `4 / 2 * 2`, which following operator precedence, division comes first, so `2 * 2` equals `4`.
 
 (c)  If we add parentheses around the argument, and also around the whole expression, the macro works as intended. See `ex03.c` for a corrected version.
+
+## Exercise 4
+For each of the following macros, give an example that illustrates a problem with the macro and show how to fix it.
+
+(a) `#define AVG(x,y) (x+y)/2`
+(b) `#define AREA(x,y) (x)*(y)`
+
+**Answer**: See `ex04.c` for a corrected version.
+
+(a) If we invoke the macro as `30 / AVG(4, 2)` it gets replaced `30 / (4 + 2) / 2`, so the divisions get evaluated from **left to right**: `30 / 6` is `5` and that times `2` is `2.5` which is truncated to `2`. If we add parentheses around the whole expression, the macro expands to the average, `3`, and we get the right result(`10`).
+
+(b) If we try to invoke `90 / AREA(3, 3)`, it would expand to `90 / 3 * 3`; division comes first, and the whole expression evaluates to `90` instead of `10`.
