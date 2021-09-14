@@ -162,3 +162,19 @@ unsigned long unsigned_long_max(unsigned long x, unsigned long y)
   return x > y ? x : y;
 }
 ```
+
+## Exercise 8
+Suppose we want a macro that expands into a string containing the current line number and file name. In other words, we'd like to write
+```c
+const char *str = LINE_FILE;
+```
+
+and have it expand into
+```c
+const char *str = "Line 10 of file foo.c";
+```
+
+where `foo.c` is the file containing the program and 10 is the line on which the invocation of `LINE_FILE` appears. *Warning:* This exercise is for experts only. Be sure to read the Q&A section carefully before attempting!
+
+
+**Answer**: See `ex08.c` to see it in action. If we tried to stringize `__LINE__` directly (using `#`) we'd get `"__LINE__"`, and not its numeric value.
