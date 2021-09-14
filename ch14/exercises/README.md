@@ -116,3 +116,49 @@ printf("sqrt(%g) = %g\n", 3.0, sqrt(3.0));
 (b) Write a macro `DISP2(f,x,y)` that's similar to DISP but works for functions with two arguments.
 
 **Answer**: See `ex06.c` to see it in action.
+
+## Exercise 7
+Let `GENERIC_MAX` be the following macro:
+```c
+#define GENERIC_MAX(type)       \
+type type##_max(type x, type y) \
+{                               \
+    return x > y ? x : y;       \
+}
+```
+
+(a) Show the preprocessor's expansion of `GENERIC_MAX(long)`.
+
+(b) Explain why `GENERIC_MAX` doesn't work for basic types such as `unsigned long`.
+
+(c) Describe a technique that would allow us to use `GENERIC_MAX` with basic types such as `unsigned long`. *Hint:* Don't change the definition of `GENERIC_MAX`.
+
+**Answer**: See `ex07.c` to see it in action.
+
+(a) `GENERIC_MAX(long)` expands to:
+```c
+long long_max(long x, long y) {
+  return x > y ? x : y;
+}
+```
+
+(b) `GENERIC_MAX(unsigned long)` expands to:
+```c
+unsigned long unsigned long_max(unsigned long x, unsigned long y) {
+  return x > y ? x : y;
+}
+```
+It doesn't work because of the **space** in the type name `unsigned long`.
+
+(c) The solution would be to create another macro before `GENERIC_MAX`:
+```C
+#define unsigned_long unsigned long
+```
+
+That would produce a correct expansion:
+```c
+unsigned long unsigned_long_max(unsigned long x, unsigned long y)
+{
+  return x > y ? x : y;
+}
+```
