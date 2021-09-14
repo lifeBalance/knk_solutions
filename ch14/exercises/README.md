@@ -176,5 +176,13 @@ const char *str = "Line 10 of file foo.c";
 
 where `foo.c` is the file containing the program and 10 is the line on which the invocation of `LINE_FILE` appears. *Warning:* This exercise is for experts only. Be sure to read the Q&A section carefully before attempting!
 
-
 **Answer**: See `ex08.c` to see it in action. If we tried to stringize `__LINE__` directly (using `#`) we'd get `"__LINE__"`, and not its numeric value.
+
+## Exercise 9
+Write the following parameterized macros.
+
+(a) `CHECK(x,y,n)` - Has the value 1 if both `x` and `y` fall between 0 and `n` - 1, inclusive.
+
+(b) `MEDIAN(x,y,z)` - Finds the median of `x`, `y` and `z`.
+
+(c) `POLYNOMIAL(x)` - Computes the polynomial 3x<sup>5</sup> + 2x<sup>4</sup> - 5x<sup>3</sup> - x<sup>2</sup> + 7x - 6.
