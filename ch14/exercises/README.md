@@ -209,3 +209,35 @@ ERROR("Range error: index = %d\n", index);
 ```
 
 **Answer**: See `ex10.c`.
+
+## Exercise 12
+
+Suppose that the macro `M` has been defined as follows:
+
+```c
+#define M 10
+```
+
+Which of the following tests will fail?
+
+(a) `#if M`
+
+(b) `#ifdef M`
+
+(c) `#ifndef M`
+
+(d) `#if defined(M)`
+
+(e) `#if !defined(M)`
+
+**Answer**: See `ex11.c` to see it in action.
+
+(a) Will succeed because `M` is not `0`.
+
+(b) Will succeed because `M` is defined.
+
+(c) Will **fail** because `M` is defined.
+
+(d) Will succeed because `M` is defined.
+
+(e) Will **fail** because `M` is defined.
