@@ -296,3 +296,72 @@ N is undefined
 ```
 
 That's because the preprocessor runs before the compiler, and even though the macro `N` is defined before the call to `f()`, right after it's **undefined** by the ``#undef`` directive (so the macro `N` is removed from the code that the compiler receives). Bottom line: `N` is undefined, so the `printf` under the `#else` directive is the one called.
+
+## Exercise 14
+Show what the following program will look like after preprocessing. Some lines of the program may cause compilation errors; find all such errors.
+```c
+#define N = 10
+#define INC(x) x+1
+#define SUB (x,y) x-y
+#define SQR(x) ((x)*(x))
+#define CUBE(x) (SQR(x)*(x))
+#define M1(x,y) x##y
+#define M2(x,y) #x #y
+
+int main(void)
+{
+    int a[N], i, j, k, m;
+
+#ifdef N
+    i = j;
+#else
+    j = i;
+#endif
+    
+    i = 10 * INC(j);
+    i = SUB(j, k);
+    i = SQR(SQR(j));
+    i = CUBE(j);
+    i = M1(j, k);
+    puts(M2(i, j));
+
+#undef SQR
+    i = SQR(j);
+#define SQR
+    i = SQR(j);
+
+    return 0;
+}
+```
+**Answer**: After using the ``-E`` flag, the preprocessor outputs:
+```c
+int main(void)
+{
+  int a[= 10], i, j, k, m;
+
+  i = j;
+
+  i = 10 * j+1;
+  i = (x,y) x-y(j, k);
+  i = ((((j)*(j)))*(((j)*(j))));
+  i = (((j)*(j))*(j));
+  i = jk;
+  puts("i" "j");
+
+  i = SQR(j);
+
+  i = (j);
+
+  return 0;
+}
+```
+The **errors** are:
+
+* The macro `N` is wrongly defined; the `=` sign is a syntax error here.
+* There's an **extra space** in the definition of the `SUB` macro; function-like macros can't have a space between the identifier and the parentheses.
+That triggers lots of errors related with the `x` and `y` arguments used in this macro, and also when assigning to the variable `i` this macro expansion.
+* The `M1` macro is using the **token-pasting** operator to join `j` and `k` into `jk`, which is a non-existent identifier; so we get an error when assigning `jk` to `i`.
+* Also, `puts` is called without having included the `stdio` header.
+* The `SQR` macro is also invoked but is being undefined and assigned its expansion to `i`. Later is defined again and assigned to `i`; that's fine.
+
+The program doesn't compile.
