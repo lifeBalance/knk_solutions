@@ -186,3 +186,12 @@ Write the following parameterized macros.
 (b) `MEDIAN(x,y,z)` - Finds the median of `x`, `y` and `z`.
 
 (c) `POLYNOMIAL(x)` - Computes the polynomial 3x<sup>5</sup> + 2x<sup>4</sup> - 5x<sup>3</sup> - x<sup>2</sup> + 7x - 6.
+
+## Exercise 10
+Functions can often --but not always-- be written as parameterized macros. Discuss what characteristics of a function would make it unsuitable as a macro.
+
+**Answer**: Several characteristics of macros make them a bad choice for using them as a replacement for functions:
+
+* Macro arguments are not type checked.
+* It's not possible to create pointers to function-like macros.
+* A macro may evaluate its arguments more than once so if we want to pass arguments with side effects, that's a problem.
