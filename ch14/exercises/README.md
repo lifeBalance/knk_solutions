@@ -211,7 +211,6 @@ ERROR("Range error: index = %d\n", index);
 **Answer**: See `ex10.c`.
 
 ## Exercise 12
-
 Suppose that the macro `M` has been defined as follows:
 
 ```c
@@ -230,7 +229,7 @@ Which of the following tests will fail?
 
 (e) `#if !defined(M)`
 
-**Answer**: See `ex11.c` to see it in action.
+**Answer**: See `ex12.c` to see it in action.
 
 (a) Will succeed because `M` is not `0`.
 
@@ -241,3 +240,59 @@ Which of the following tests will fail?
 (d) Will succeed because `M` is defined.
 
 (e) Will **fail** because `M` is defined.
+
+## Exercise 13
+(a) Show what the following program will look like after preprocessing. you may ignore any lines added to the program as a result of including the `<stdio.h>` header.
+```c
+#include <stdio.h>
+
+#define N 100
+
+void f(void);
+
+int main(void)
+{
+    f();
+#ifdef N
+#undef N
+#endif
+    return 0;
+}
+
+void f(void)
+{
+#if defined(N)
+    printf("N is %d\n", N);
+#else
+    printf("N is undefined\n");
+#endif
+}
+```
+
+(b) What will be the output of this program?
+
+**Answer**: See `ex13.c` to see it in action.
+
+(a) If we run the compiler with the `-E` option, we get the preprocessor's output on our terminal; this is the result (with a bit of formatting):
+
+```c
+void f(void);
+
+int main(void)
+{
+  f();
+  return 0;
+}
+
+void f(void)
+{
+  printf("N is undefined\n");
+}
+```
+
+(b) The output is:
+```
+N is undefined
+```
+
+That's because the preprocessor runs before the compiler, and even though the macro `N` is defined before the call to `f()`, right after it's **undefined** by the ``#undef`` directive (so the macro `N` is removed from the code that the compiler receives). Bottom line: `N` is undefined, so the `printf` under the `#else` directive is the one called.
