@@ -375,3 +375,22 @@ Inserte El Disco 1  (if SPANISH is defined)
 ```
 
 **Answer**: See `ex15.c`.
+
+## Exercise 16
+(C99) Assume that the following macro definitions are in effect:
+```c
+#define IDENT(x) PRAGMA(ident #x)
+#define PRAGMA(x) _Pragma(#x)
+```
+
+What will the following line look like after macro expansion?
+```c
+IDENT(foo)
+```
+
+**Answer**: See `ex16.c`. 
+
+* The macro `IDENT` is called with the token `foo`.
+* `IDENT` calls `PRAGMA` with the tokens `ident` and the stringized `"foo"`.
+* The `PRAGMA` macro uses the `_Pragma` operator to turn `ident "foo"` into a `#pragma` directive.
+* The end result is `#pragma ident "foo"`; GCC doesn't recognize that pragma though.
