@@ -365,3 +365,13 @@ That triggers lots of errors related with the `x` and `y` arguments used in this
 * The `SQR` macro is also invoked but is being undefined and assigned its expansion to `i`. Later is defined again and assigned to `i`; that's fine.
 
 The program doesn't compile.
+
+## Exercise 15
+Suppose that a program needs to display messages in either English, French or Spanish. Using a condition compilation, write a program fragment that displays one of the following three messages, depending on whether or not the specified macro is defined:
+```
+Insert Disk 1       (if ENGLISH is defined)
+Inserez Le Disque 1 (if FRENCH is defined)
+Inserte El Disco 1  (if SPANISH is defined)
+```
+
+**Answer**: See `ex15.c`.
