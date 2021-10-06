@@ -81,7 +81,7 @@ int main(void)
 
 (d) Is it necessary for the `DEBUG` macro to be defined *before* `debug.h` is included in order for `PRINT_DEBUG` to have the desired effect? Justify your answer.
 
-**Answer**:
+**Answer**: Check files in the `ex04` folder.
 
 (a) The output:
 ```
@@ -101,3 +101,8 @@ Output if DEBUG is not defined:
 (c) The difference is that the definition of the parameterized macro `PRINT_DEBUG(n)` depends on the definition of another macro (`DEBUG`); if the latter is not defined, the former will be defined as an **empty** macro, and will expand to **empty string**.
 
 (d) Yes, it is necessary that the macro `DEBUG` is defined **before** that the header is **included**, since the include directive literally includes the contents of the header at the location of the ``#include`` directive; if the macro `DEBUG` is not defined by that point, the `#ifdef` inside the *header* will evaluate to **false**.
+
+## Exercise 5
+Suppose that a program consists of three source files -- `main.c`, `f1.c` and `f2.c` -- plus two header files, `f1.h` and `f2.h`. All three source files include `f1.h`, but only `f1.c` and `f2.c` include `f2.h`. Write a makefile for this program, assuming that the compiler is `gcc` and that the executable file is to be named `demo`.
+
+**Answer**: Check `Makefile` in the `ex05` folder.
