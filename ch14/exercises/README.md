@@ -1,4 +1,4 @@
-# Chapter 4: Exercises
+# Chapter 14: Exercises
 
 ## Exercise 1
 Write parameterized macros that compute the following values.
