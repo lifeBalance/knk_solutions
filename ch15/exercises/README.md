@@ -16,3 +16,13 @@ source files.
 * If facilitates code reuse, since we could drop source files in other projects.
 
 (b) Main **disadvantage** is added complexity, especially if the number of files grows disproportionately.
+
+## Exercise 2
+Which of the following should *not* be put into a header file? Why not?
+
+(a) Function prototypes
+(b) Function definitions
+(c) Macro definitions
+(d) Type definitions
+
+**Answer**: Function definitions should never go on a header file; if a header is included in several source files, we'll get an error when the **linker** discover two identical copies of the object code for that function.
