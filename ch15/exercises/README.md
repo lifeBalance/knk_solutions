@@ -1,8 +1,7 @@
 # Chapter 15: Exercises
 
 ## Exercise 1
-Section 15.1 listed several advantages of dividing a program into multiple
-source files.
+Section 15.1 listed several advantages of dividing a program into multiple source files.
 
 (a) Describe several other advantages.  
 (b) Describe some disadvantages.
@@ -26,3 +25,13 @@ Which of the following should *not* be put into a header file? Why not?
 (d) Type definitions
 
 **Answer**: Function definitions should never go on a header file; if a header is included in several source files, we'll get an error when the **linker** discover two identical copies of the object code for that function.
+
+## Exercise 3
+We saw that writing `#include <file>` instead of `#include "file"` may not work if `file` is one that we've written. Would there by any problem with writing `#include "file"` instead of `#include <file>` if `file` is a system header?
+
+**Answer**: When the header filename is enclosed in **double quotes**, the following places are searched for:
+
+* The **current directory**.
+* The **default directory** where **system headers** reside.
+
+So if we use **double quotes**, when the system is not found in the current directory, the default folder for system headers will be searched, and the header will be found there. So yes, it'll work.
