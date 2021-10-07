@@ -106,3 +106,23 @@ Output if DEBUG is not defined:
 Suppose that a program consists of three source files -- `main.c`, `f1.c` and `f2.c` -- plus two header files, `f1.h` and `f2.h`. All three source files include `f1.h`, but only `f1.c` and `f2.c` include `f2.h`. Write a makefile for this program, assuming that the compiler is `gcc` and that the executable file is to be named `demo`.
 
 **Answer**: Check `Makefile` in the `ex05` folder.
+
+## Exercise 6
+The following questions refer to the program described in Exercise 5.
+
+(a) Which files need to be compiled when the program is built for the first time?
+
+(b) If `f1.c` is changed after the program has been built, which files need to be recompiled?
+
+(c) If `f1.h` is changed after the program has been built, which files need to be recompiled?
+
+(d) If `f2.h` is changed after the program has been built, which files need to be recompiled?
+
+**Answer**:
+(a) All source files must be compiled: `main.c`, `f1.c`, `f2.c`. Headers are not compiled, but if they're modified, source files that include them must be recompiled.
+
+(b) If `f1.c` is modified, `f1.c` must be compiled.
+
+(c) If `f1.h` is modified, `main.c`, `f1.c` and `f2.c` must be compiled (because all of them include that header).
+
+(d) If `f2.h` is modified, `f1.c` and `f2.c` must be compiled; both include that header.
