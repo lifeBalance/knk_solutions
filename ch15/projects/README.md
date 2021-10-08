@@ -19,3 +19,8 @@ Modify the `qsort.c` program of Section 9.6 so that the `quicksort` and `split` 
 Modify the `remind.c` program of Section 13.5 so that the `read_line` function is in a separate file named `readline.c`. Create a header file named `readline.h` that contains a prototype for the function and have both `remind.c` and `readline.c` include this file.
 
 **Answer**: See the `pr04` folder.
+
+## Project 5
+Modify Programming Project 6 from Chapter 10 so that it has separate `stack.h` and `stack.c` files, as described in Section 15.2.
+
+**Answer**: See the `pr05` folder.
