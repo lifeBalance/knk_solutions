@@ -14,3 +14,8 @@ Modify the `justify` program of Section 15.3 by having the `read_word` function 
 Modify the `qsort.c` program of Section 9.6 so that the `quicksort` and `split` functions are in a separate file named `quicksort.c`. Create a header file named `quicksort.h` that contains prototypes for the two functions and have both `qsort.c` and `quicksort.c` include this file.
 
 **Answer**: See the `pr03` folder.
+
+## Project 4
+Modify the `remind.c` program of Section 13.5 so that the `read_line` function is in a separate file named `readline.c`. Create a header file named `readline.h` that contains a prototype for the function and have both `remind.c` and `readline.c` include this file.
+
+**Answer**: See the `pr04` folder.
