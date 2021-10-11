@@ -61,3 +61,8 @@ c3.imaginary = c1.imaginary + c2.imaginary;
 (d) Write a function named `add_complex` that adds the corresponding members of its arguments (both `complex` structures), then returns the result (another `complex` structure).
 
 **Answer**: Check ``ex03.c``.
+
+## Exercise 4
+Repeat Exercise 3, but this time using a *type* named `Complex`.
+
+**Answer**: Check ``ex04.c``.

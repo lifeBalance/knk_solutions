@@ -1,20 +1,20 @@
 /*
-** Exercise #3
+** Exercise #4
 */
 
 #include <stdio.h>
 
-struct complex {
+typedef struct {
 	double real;
 	double imaginary;
-};
+} Complex;
 
-struct complex make_complex(double a, double b);
-struct complex add_complex(struct complex a, struct complex b);
+Complex make_complex(double a, double b);
+Complex add_complex(Complex a, Complex b);
 
 int main(void)
 {
-	struct complex c1, c2, c3;
+	Complex c1, c2, c3;
 
 	c1 = make_complex(1.2, 3.4);
 	printf("Real: %.2f, Imaginary: %.2f\n", c1.real, c1.imaginary);
@@ -27,15 +27,15 @@ int main(void)
 	return (0);
 }
 
-struct complex make_complex(double a, double b)
+Complex make_complex(double a, double b)
 {
-	struct complex ret_val = {.real = a, .imaginary = b};
+	Complex ret_val = {.real = a, .imaginary = b};
 	return (ret_val);
 }
 
-struct complex add_complex(struct complex a, struct complex b)
+Complex add_complex(Complex a, Complex b)
 {
-	struct complex ret_val;
+	Complex ret_val;
 
 	ret_val.real = a.real + b.real;
 	ret_val.imaginary = a.imaginary + b.imaginary;
