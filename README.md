@@ -17,3 +17,4 @@ This repo contains **my solutions** for the **exercises** and **projects** for t
 * [Chapter 13](ch13)
 * [Chapter 14](ch14)
 * [Chapter 15](ch15)
+* [Chapter 16](ch16)
