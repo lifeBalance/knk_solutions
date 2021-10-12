@@ -9,7 +9,7 @@ struct { int x, y;} y;
 
 Are these declarations legal on an individual basis? Could both declarations appear as shown in a program? Justify your answer.
 
-**Answer**: Yes, they're legal because both structures act like namespaces for the members they contain. So for example ``x.x`` and ``x.y`` are different than ``y.x`` and ``y.y``.
+**Answer**: Yes, they're legal because both structures act like namespaces for the members they contain. So for example `x.x` and `x.y` are different than `y.x` and `y.y`.
 
 ## Exercise 2
 (a) Declare structure variables named `c1`, `c2` and `c3`, each having members `real` and `imaginary` of type `double`.
@@ -60,12 +60,12 @@ c3.imaginary = c1.imaginary + c2.imaginary;
 
 (d) Write a function named `add_complex` that adds the corresponding members of its arguments (both `complex` structures), then returns the result (another `complex` structure).
 
-**Answer**: Check ``ex03.c``.
+**Answer**: Check `ex03.c`.
 
 ## Exercise 4
 Repeat Exercise 3, but this time using a *type* named `Complex`.
 
-**Answer**: Check ``ex04.c``.
+**Answer**: Check `ex04.c`.
 
 ## Exercise 5
 Write the following functions, assuming that the `date` structure contains three members: `month`, `day` and `year` (all of type `int`).
@@ -77,3 +77,16 @@ Returns the day of the year (an integer between 1 and 366) that corresponds to t
 (b) `int compare_dates(struct date d1, struct date d2);`
 
 Returns -1 if `d1` is an earlier date than `d2`, +1 if `d1` is a later date than `d2`, and 0 if `d1` and `d2` are the same.
+
+**Answer**: Check `ex05.c`.
+
+## Exercise 6
+Write the following function, assuming that the `time` structure contains three members: `hours`, `minutes` and `seconds` (all of type `int`).
+
+```c
+struct time split_time(long total_seconds);
+```
+
+`total_seconds` is a time represented as the number of seconds since midnight. The function returns a structure containing the equivalent time in hours (0-23), minutes (0-59) and seconds (0-59).
+
+**Answer**: Check `ex06.c`.
