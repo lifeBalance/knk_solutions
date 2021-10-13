@@ -1,5 +1,5 @@
 /*
-** Exercise #6
+** Exercise #7
 */
 
 #include <stdio.h>

@@ -107,3 +107,19 @@ Assume that the `fraction` structure contains two members: `numerator` and `deno
 The fractions `f`, `f1` and `f2` will be arguments of type `struct fraction`: each function will return a value of type `struct fraction`. The fractions returned by the functions in parts (b)-(e) should be reduced to lowest terms. *Hint:* You may use the function from part (a) to help write the functions in parts (b)-(e).
 
 **Answer**: Check `ex07.c`.
+
+## Exercise 8
+Let `color` be the following structure:
+```c
+struct color {
+    int red;
+    int green;
+    int blue;
+};
+```
+
+(a) Write a declaration for a `const` variable named `MAGENTA` of type `struct color` whose members have the values 255, 0 and 255, respectively.
+
+(b) (C99) Repeat part (a), but use a designated initializer that doesn't specify the value of `green`, allowing it to defaul to 0.
+
+**Answer**: Check `ex08.c`.
