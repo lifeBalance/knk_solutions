@@ -158,3 +158,24 @@ A `point` structure stores the *x* and *y* coordinates of a point on the screen.
 (d) Determine whether a point `p` lies within `r`, returning `true` or `false` (`p` is an additional argument of type `struct point`).
 
 **Answer**:  Check `ex10.c`.
+
+## Exercise 11
+Suppose that `s` is the following structure:
+```c
+struct {
+    double a;
+    union {
+        char b[4];
+        double c;
+        int d;
+    } e;
+    char f[4];
+} s;
+```
+
+If `char` values occupy one byte, `int` values occupy four bytes, and `double` values occupy eight bytes, how much space will a C compiler allocate for `s`? (Assume that the compiler leaves no "holes" between members.)
+
+**Answer**:  It will allocate 8 + 8 + 4 = **20 bytes**:
+a = 8 bytes
+c = 8 bytes (the largest in the union)
+f = 4 bytes (it's an array of 4 char)
