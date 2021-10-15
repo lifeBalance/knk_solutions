@@ -263,3 +263,14 @@ arguments to the function).
 (c) Scale `s` by a factor of `c` (a `double` value), returning the modified version of `s` (`c` is an additional argument to the function).
 
 **Answer**: Check `ex14.c` to see it in action.
+
+## Exercise 15
+(a) Declare a tag for an enumeration whose values represent the seven days of the week.
+
+(b) Use `typedef` to define a name for the enumeration of part (a).
+
+**Answer**: Check `ex15.c` to see it in action.
+
+(a) `enum day {MONDAY = 1, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY};`
+
+(b) `typedef enum {MON = 1, TUE, WED, THU, FRI, SAT, SUN} Day;`
