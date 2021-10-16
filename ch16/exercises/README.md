@@ -314,3 +314,34 @@ enum num {DOUBLE=2, TRIPLE=3};
 printf("%d\n", 3 * DOUBLE);           /* 6 */
 printf("%d\n", 2 * TRIPLE);           /* 6 */
 ```
+
+## Exercise 17
+Suppose that `b` and `i` are declared as follows:
+```c
+enum {FALSE, TRUE} b;
+int i;
+```
+
+Which of the following statements are legal? Which ones are "safe" (always yield a meaningful result)?
+
+(a) `b = FALSE;`
+
+(b) `b = i;`
+
+(c) `b++;`
+
+(d) `i = b;`
+
+(e) `i = 2 * b + 1;`
+
+**Answer**:
+
+(a) Legal and safe. We're using the enumeration as it's intended to be used.
+
+(b) Legal but **not safe**. We may end up assigning ``b`` a value, that is not among the enumerated constants.
+
+(c) Legal but **not safe**. For the same reason stated above.
+
+(d) Legal; ``i`` is just an ``int`` variable that can take any integer value (enumeration constants are just integers under the hood).
+
+(e) Legal; same reason stated above.
