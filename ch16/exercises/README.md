@@ -369,3 +369,13 @@ Declare a structure with the following members whose tag is `pinball_machine`:
 `players` -- an integer (representing the maximum number of players)
 
 **Answer**: Check `ex19.c`.
+
+## Exercise 20
+Suppose that the `direction` variable is declared in the following way:
+```c
+enum {NORTH, SOUTH, EAST, WEST} direction;
+```
+
+Let `x` and `y` be `int` variables. Write a `switch` statement that tests the value of `direction`, incrementing `x` if `direction` is `EAST`, decrementing `x` if `direction` is `WEST`, incrementing `y` if `direction` is `SOUTH` and decrementing `y` if `direction` is `NORTH`.
+
+**Answer**: Check `ex20.c`.
