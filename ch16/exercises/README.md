@@ -379,3 +379,24 @@ enum {NORTH, SOUTH, EAST, WEST} direction;
 Let `x` and `y` be `int` variables. Write a `switch` statement that tests the value of `direction`, incrementing `x` if `direction` is `EAST`, decrementing `x` if `direction` is `WEST`, incrementing `y` if `direction` is `SOUTH` and decrementing `y` if `direction` is `NORTH`.
 
 **Answer**: Check `ex20.c`.
+
+## Exercise 21
+What are the integer values of the enumeration constants in each of the following declarations?
+
+(a) `enum {NUL, SOH, STX, ETX};`
+
+(b) `enum {VT = 11, FF, CR};`
+
+(c) `enum {SO = 14, ST, DLE, CAN = 24, EM};`
+
+(d) `enum {ENQ = 45, ACK, BEL, LF = 37, ETB, ESC};`
+
+**Answer**: Check `ex21.c` to see it in action.
+
+(a) 0, 1, 2, 3
+
+(b) 11, 12, 13
+
+(c) 14, 15, 16, 24, 25
+
+(d) 45, 46, 47, 37, 38, 39
