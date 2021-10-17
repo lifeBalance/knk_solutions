@@ -356,3 +356,16 @@ Which of the following statements are legal? Which ones are "safe" (always yield
 (d) Add an initializer to the declaration in part (c) so that `board`'s initial value corresponds to the usual arrangement of pieces at the start of a chess game. A square that's not occupied by a piece should have an "empty" piece value and the color black.
 
 **Answer**: Check `ex18.c`.
+
+## Exercise 19
+Declare a structure with the following members whose tag is `pinball_machine`:
+
+`name` -- a string of up to 40 characters
+
+`year` -- an integer (representing the year of manufacture)
+
+`type` -- an enumeration with the values `EM` (electromechanical) and `SS` (solid state)
+
+`players` -- an integer (representing the maximum number of players)
+
+**Answer**: Check `ex19.c`.
