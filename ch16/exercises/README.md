@@ -400,3 +400,15 @@ What are the integer values of the enumeration constants in each of the followin
 (c) 14, 15, 16, 24, 25
 
 (d) 45, 46, 47, 37, 38, 39
+
+## Exercise 22
+Let `chess_pieces` be the following enumeration:
+```c
+enum chess_pieces {KING, QUEEN, ROOK, BISHOP, KNIGHT, PAWN};
+```
+
+(a) Write a declaration (including an initializer) for a constant array of integers named `piece_value` that stores the numbers 200, 9, 5, 3, 3 and 1, representing the value of each chess piece from king to pawn. (The king's value is actually infinite, since "capturing" the king (checkmate) ends the game, but some chess-playing software assigns the king a large value such as 200.)
+
+(b) (C99) Repeat part (a), but use a designated initializer to initialize the array. Use the eumeration constants in `chess_pieces` as subscripts in the designators. (*Hint:* See the last question in Q&A for an example.)
+
+**Answer**: Check `ex22.c` to see it in action.
