@@ -14,3 +14,8 @@ Modify the `inventory.c` program of Section 16.3 so that the `p` (print) operati
 Modify the `inventory.c` program of Section 16.3 by making `inventory` and `num_parts` local to the `main` function.
 
 **Answer**: Check the `pr03` folder.
+
+## Project 4
+Modify the `inventory.c` program of Section 16.3 by adding a `price` member to the `part` structure. The `insert` function should ask the user for the price of a new item. The `search` and `print` functions should display the price. Add a new command that allows the user to change the price of a part.
+
+**Answer**: Check the `pr04` folder.
