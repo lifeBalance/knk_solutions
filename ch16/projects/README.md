@@ -24,3 +24,8 @@ Modify the `inventory.c` program of Section 16.3 by adding a `price` member to t
 Modify Programming Project 8 from Chapter 5 so that the times are stored in a single array. The elements of the array will be structures, each containing a departure time and the corresponding arrival time (Each time will be an integer, representing the number of minutes since midnight). The program will use a loop to search the array for the departure time closest to the time entered by the user.
 
 **Answer**: Check `pr05.c`.
+
+## Project 6
+Modify Programming Project 9 from Chapter 5 so that each date entered by the user is stored in a `date` structure (see Exercise 5). Incorporate the `compare_dates` function of Exercise 5 into your program.
+
+**Answer**: Check `pr06.c`.
